@@ -18,7 +18,7 @@ public class ModBlocks {
             DeferredRegister.create(ForgeRegistries.BLOCKS, Titanessa.MOD_ID);
 
     public static final RegistryObject<Block> COSMIC_CORE = registerBlock("cosmic_core",
-            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEACON)));
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEACON).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> STARSTONE = registerBlock("starstone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
 
