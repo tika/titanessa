@@ -24,6 +24,7 @@ public class ModCreativeModeTabs {
 
                         // ModBlocks
                         pOutput.accept(ModBlocks.COSMIC_CORE.get());
+                        pOutput.accept(ModBlocks.STARSTONE.get());
                     })
                     .build()
     );

@@ -19,6 +19,8 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> COSMIC_CORE = registerBlock("cosmic_core",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEACON)));
+    public static final RegistryObject<Block> STARSTONE = registerBlock("starstone",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);
