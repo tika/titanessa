@@ -7,16 +7,16 @@ import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration;
 
-public class BallCluster extends Feature<NoneFeatureConfiguration> {
+public class BallCluster extends Feature<ProbabilityFeatureConfiguration> {
 //    public BallCluster(Codec<NoneFeatureConfiguration> pCodec) {
     public BallCluster() {
-        super(NoneFeatureConfiguration.CODEC);
+        super(ProbabilityFeatureConfiguration.CODEC);
     }
 
     @Override
-    public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> pContext) {
+    public boolean place(FeaturePlaceContext<ProbabilityFeatureConfiguration> pContext) {
         WorldGenLevel worldgenlevel = pContext.level();
         BlockPos blockpos = pContext.origin();
         RandomSource random = pContext.random();
