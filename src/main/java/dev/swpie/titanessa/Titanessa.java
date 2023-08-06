@@ -1,6 +1,8 @@
 package dev.swpie.titanessa;
 
 import com.mojang.logging.LogUtils;
+import dev.swpie.titanessa.item.ModItems;
+import net.minecraft.world.item.CreativeModeTabs;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.event.BuildCreativeModeTabContentsEvent;
@@ -25,11 +27,17 @@ public class Titanessa {
     public Titanessa() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
 
+        // Register items to game
+        ModItems.register(modEventBus);
+
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
 
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
+
+        // Add creative mode tab
+        modEventBus.addListener(this::addCreative);
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {
@@ -38,7 +46,10 @@ public class Titanessa {
 
     // Add the example block item to the building blocks tab
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
-
+        if (event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
+            event.accept(ModItems.CELESTIUM_INGOT);
+            event.accept(ModItems.CELESTIUM_CHUNK);
+        }
     }
 
     // You can use SubscribeEvent and let the Event Bus discover methods to call
