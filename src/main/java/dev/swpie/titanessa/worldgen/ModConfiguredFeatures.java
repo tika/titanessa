@@ -2,6 +2,7 @@ package dev.swpie.titanessa.worldgen;
 
 import dev.swpie.titanessa.Titanessa;
 import dev.swpie.titanessa.item.ModBlocks;
+import dev.swpie.titanessa.worldgen.feature.BallCluster;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
 import net.minecraft.resources.ResourceKey;
@@ -12,6 +13,7 @@ import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.configurations.FeatureConfiguration;
 import net.minecraft.world.level.levelgen.feature.configurations.OreConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration;
 import net.minecraft.world.level.levelgen.structure.templatesystem.BlockMatchTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.RuleTest;
 import net.minecraft.world.level.levelgen.structure.templatesystem.TagMatchTest;
@@ -31,9 +33,9 @@ public class ModConfiguredFeatures {
                         ModBlocks.STARSTONE.get().defaultBlockState()),
                 OreConfiguration.target(deepslateReplaceables, ModBlocks.STARSTONE.get().defaultBlockState()));
 
-        register(context, COSMIC_VEIN_KEY, Feature.ORE, new OreConfiguration(overworldStarstone, 9));
+//        register(context, COSMIC_VEIN_KEY, Feature.ORE, new OreConfiguration(overworldStarstone, 9));
 
-//        register(context, COSMIC_VEIN_KEY, new BallCluster(), new ProbabilityFeatureConfiguration(1.0F));
+        register(context, COSMIC_VEIN_KEY, new BallCluster(), new ProbabilityFeatureConfiguration(1.0F));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {

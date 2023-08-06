@@ -1,17 +1,16 @@
 package dev.swpie.titanessa.worldgen;
 
+import com.google.common.collect.ImmutableList;
 import dev.swpie.titanessa.Titanessa;
 import net.minecraft.core.Holder;
 import net.minecraft.core.HolderGetter;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.data.worldgen.BootstapContext;
+import net.minecraft.data.worldgen.placement.PlacementUtils;
 import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.level.levelgen.VerticalAnchor;
 import net.minecraft.world.level.levelgen.feature.ConfiguredFeature;
-import net.minecraft.world.level.levelgen.placement.HeightRangePlacement;
-import net.minecraft.world.level.levelgen.placement.PlacedFeature;
-import net.minecraft.world.level.levelgen.placement.PlacementModifier;
+import net.minecraft.world.level.levelgen.placement.*;
 
 import java.util.List;
 
@@ -21,12 +20,12 @@ public class ModPlacedFeatures {
     public static void bootstrap(BootstapContext<PlacedFeature> context) {
         HolderGetter<ConfiguredFeature<?, ?>> configuredFeatures = context.lookup(Registries.CONFIGURED_FEATURE);
 
-        register(context, COSMIC_VEIN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COSMIC_VEIN_KEY), ModOrePlacement.commonOrePlacement(
-                9, // veins per chunk
-                HeightRangePlacement.uniform(VerticalAnchor.aboveBottom(-64), VerticalAnchor.absolute(80)))
-        );
+        register(context, COSMIC_VEIN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COSMIC_VEIN_KEY), ImmutableList.of(
+                InSquarePlacement.spread(),
+                PlacementUtils.HEIGHTMAP_TOP_SOLID,
+                CountPlacement.of(48),
+                BiomeFilter.biome()));
     }
-
 
     private static ResourceKey<PlacedFeature> createKey(String name) {
         return ResourceKey.create(Registries.PLACED_FEATURE, new ResourceLocation(Titanessa.MOD_ID, name));
