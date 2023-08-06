@@ -2,7 +2,6 @@
   "replace": false,
 
   "values": [
-    "minecraft:desert",
-    "minecraft:plains"
+    "minecraft:desert"
   ]
 }
