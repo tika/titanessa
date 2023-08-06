@@ -1,6 +1,5 @@
-package dev.swpie.titanessa.world.feature;
+package dev.swpie.titanessa.worldgen.feature;
 
-import com.mojang.serialization.Codec;
 import dev.swpie.titanessa.item.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
@@ -8,22 +7,16 @@ import net.minecraft.world.level.WorldGenLevel;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
-import net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration;
+import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
-public class CosmicVeinFeature extends Feature<ProbabilityFeatureConfiguration> {
-    public CosmicVeinFeature(Codec<ProbabilityFeatureConfiguration> pCodec) {
-        super(pCodec);
+public class BallCluster extends Feature<NoneFeatureConfiguration> {
+//    public BallCluster(Codec<NoneFeatureConfiguration> pCodec) {
+    public BallCluster() {
+        super(NoneFeatureConfiguration.CODEC);
     }
 
-    /**
-     * Places the given feature at the given location.
-     * During world generation, features are provided with a 3x3 region of chunks, centered on the chunk being generated,
-     * that they can safely generate into.
-     *
-     * @param pContext A context object with a reference to the level and the position the feature is being placed at
-     */
     @Override
-    public boolean place(FeaturePlaceContext<ProbabilityFeatureConfiguration> pContext) {
+    public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> pContext) {
         WorldGenLevel worldgenlevel = pContext.level();
         BlockPos blockpos = pContext.origin();
         RandomSource random = pContext.random();

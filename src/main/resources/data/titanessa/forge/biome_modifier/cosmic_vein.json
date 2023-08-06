@@ -1,6 +1,6 @@
 {
   "type": "forge:add_features",
   "biomes": "#minecraft:is_overworld",
-  "features": "titanessa:starstone_placed",
+  "features": "titanessa:cosmic_vein",
   "step": "underground_ores"
 }

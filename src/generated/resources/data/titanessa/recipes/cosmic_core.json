@@ -1,12 +1,12 @@
 {
   "type": "minecraft:crafting_shaped",
-  "category": "decoration",
+  "category": "misc",
   "key": {
     "#": {
       "item": "minecraft:deepslate"
     },
     "l": {
-      "item": "minecraft:lapis_lazuli_block"
+      "item": "minecraft:lapis_block"
     }
   },
   "pattern": [
@@ -15,7 +15,8 @@
     "###"
   ],
   "result": {
-    "count": 4,
-    "item": "titanessa:starstone"
-  }
+    "count": 3,
+    "item": "titanessa:cosmic_core"
+  },
+  "show_notification": false
 }
