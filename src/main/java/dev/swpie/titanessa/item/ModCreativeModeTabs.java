@@ -18,8 +18,12 @@ public class ModCreativeModeTabs {
                     .icon(() -> new ItemStack(ModItems.CELESTIUM_INGOT.get()))
                     .title(Component.translatable("creativetab.titanessa_tab"))
                     .displayItems((pParameters, pOutput) -> {
+                        // ModItems
                         pOutput.accept(ModItems.CELESTIUM_INGOT.get());
                         pOutput.accept(ModItems.CELESTIUM_CHUNK.get());
+
+                        // ModBlocks
+                        pOutput.accept(ModBlocks.COSMIC_CORE.get());
                     })
                     .build()
     );

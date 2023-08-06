@@ -1,6 +1,7 @@
 package dev.swpie.titanessa;
 
 import com.mojang.logging.LogUtils;
+import dev.swpie.titanessa.item.ModBlocks;
 import dev.swpie.titanessa.item.ModCreativeModeTabs;
 import dev.swpie.titanessa.item.ModItems;
 import net.minecraftforge.api.distmarker.Dist;
@@ -31,6 +32,9 @@ public class Titanessa {
 
         // Register items to game
         ModItems.register(modEventBus);
+
+        // Register blocks to game
+        ModBlocks.register(modEventBus);
 
         // Register the commonSetup method for modloading
         modEventBus.addListener(this::commonSetup);
