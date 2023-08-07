@@ -2,6 +2,11 @@
   "item.titanessa.celestium_ingot": "Celestium Ingot",
   "item.titanessa.celestium_chunk": "Celestium Chunk",
 
+  "item.titanessa.celestium_helmet": "Celestium Helmet",
+  "item.titanessa.celestium_chestplate": "Celestium Chunk",
+  "item.titanessa.celestium_leggings": "Celestium Leggings",
+  "item.titanessa.celestium_boots": "Celestium Boots",
+
   "block.titanessa.cosmic_core": "Cosmic Core",
   "block.titanessa.starstone": "Starstone",
   "block.titanessa.celestium_block": "Celestium Block",

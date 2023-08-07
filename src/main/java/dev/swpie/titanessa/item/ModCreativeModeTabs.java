@@ -23,6 +23,11 @@ public class ModCreativeModeTabs {
                         pOutput.accept(ModItems.CELESTIUM_INGOT.get());
                         pOutput.accept(ModItems.CELESTIUM_CHUNK.get());
 
+                        pOutput.accept(ModItems.CELESTIUM_HELMET.get());
+                        pOutput.accept(ModItems.CELESTIUM_CHESTPLATE.get());
+                        pOutput.accept(ModItems.CELESTIUM_LEGGINGS.get());
+                        pOutput.accept(ModItems.CELESTIUM_BOOTS.get());
+
                         // ModBlocks
                         pOutput.accept(ModBlocks.COSMIC_CORE.get());
                         pOutput.accept(ModBlocks.STARSTONE.get());

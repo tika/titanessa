@@ -19,6 +19,11 @@ public class ModItemModelProvider extends ItemModelProvider {
     protected void registerModels() {
         simpleItem(ModItems.CELESTIUM_CHUNK);
         simpleItem(ModItems.CELESTIUM_INGOT);
+
+        simpleItem(ModItems.CELESTIUM_HELMET);
+        simpleItem(ModItems.CELESTIUM_CHESTPLATE);
+        simpleItem(ModItems.CELESTIUM_LEGGINGS);
+        simpleItem(ModItems.CELESTIUM_BOOTS);
     }
 
     private ItemModelBuilder simpleItem(RegistryObject<Item> item) {
