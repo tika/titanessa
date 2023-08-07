@@ -1,6 +1,7 @@
-package dev.swpie.titanessa.item;
+package dev.swpie.titanessa.block;
 
 import dev.swpie.titanessa.Titanessa;
+import dev.swpie.titanessa.item.ModItems;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
@@ -21,6 +22,8 @@ public class ModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.BEACON).requiresCorrectToolForDrops()));
     public static final RegistryObject<Block> STARSTONE = registerBlock("starstone",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.DEEPSLATE)));
+    public static final RegistryObject<Block> CELESTIUM_BLOCK = registerBlock("celestium_block",
+            () -> new Block(BlockBehaviour.Properties.copy(Blocks.IRON_BLOCK)));
 
     private static <T extends Block>RegistryObject<T> registerBlock(String name, Supplier<T> block) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

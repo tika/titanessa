@@ -1,7 +1,7 @@
 package dev.swpie.titanessa;
 
 import com.mojang.logging.LogUtils;
-import dev.swpie.titanessa.item.ModBlocks;
+import dev.swpie.titanessa.block.ModBlocks;
 import dev.swpie.titanessa.item.ModCreativeModeTabs;
 import dev.swpie.titanessa.item.ModItems;
 import dev.swpie.titanessa.worldgen.ModFeatures;

@@ -1,6 +1,7 @@
 package dev.swpie.titanessa.item;
 
 import dev.swpie.titanessa.Titanessa;
+import dev.swpie.titanessa.block.ModBlocks;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
@@ -25,6 +26,7 @@ public class ModCreativeModeTabs {
                         // ModBlocks
                         pOutput.accept(ModBlocks.COSMIC_CORE.get());
                         pOutput.accept(ModBlocks.STARSTONE.get());
+                        pOutput.accept(ModBlocks.CELESTIUM_BLOCK.get());
                     })
                     .build()
     );

@@ -1,7 +1,7 @@
 package dev.swpie.titanessa.datagen;
 
 import dev.swpie.titanessa.Titanessa;
-import dev.swpie.titanessa.item.ModBlocks;
+import dev.swpie.titanessa.block.ModBlocks;
 import net.minecraft.data.PackOutput;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -17,6 +17,7 @@ public class ModBlockStateProvider extends BlockStateProvider {
     protected void registerStatesAndModels() {
         blockWithItem(ModBlocks.COSMIC_CORE);
         blockWithItem(ModBlocks.STARSTONE);
+        blockWithItem(ModBlocks.CELESTIUM_BLOCK);
     }
 
     private void blockWithItem(RegistryObject<Block> blockRegistryObject) {

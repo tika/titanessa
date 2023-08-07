@@ -1,6 +1,6 @@
 package dev.swpie.titanessa.worldgen.feature;
 
-import dev.swpie.titanessa.item.ModBlocks;
+import dev.swpie.titanessa.block.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.util.RandomSource;
 import net.minecraft.world.level.WorldGenLevel;

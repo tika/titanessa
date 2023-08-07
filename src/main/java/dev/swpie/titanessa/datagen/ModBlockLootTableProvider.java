@@ -1,6 +1,6 @@
 package dev.swpie.titanessa.datagen;
 
-import dev.swpie.titanessa.item.ModBlocks;
+import dev.swpie.titanessa.block.ModBlocks;
 import dev.swpie.titanessa.item.ModItems;
 import net.minecraft.data.loot.BlockLootSubProvider;
 import net.minecraft.world.flag.FeatureFlags;
@@ -17,6 +17,7 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
     @Override
     protected void generate() {
         dropSelf(ModBlocks.STARSTONE.get());
+        dropSelf(ModBlocks.CELESTIUM_BLOCK.get());
 
         add(ModBlocks.COSMIC_CORE.get(),
                 (block) -> createOreDrop(ModBlocks.COSMIC_CORE.get(), ModItems.CELESTIUM_CHUNK.get()));

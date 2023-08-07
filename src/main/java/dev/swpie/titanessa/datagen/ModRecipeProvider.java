@@ -1,6 +1,6 @@
 package dev.swpie.titanessa.datagen;
 
-import dev.swpie.titanessa.item.ModBlocks;
+import dev.swpie.titanessa.block.ModBlocks;
 import dev.swpie.titanessa.item.ModItems;
 import net.minecraft.data.PackOutput;
 import net.minecraft.data.recipes.FinishedRecipe;
@@ -37,5 +37,7 @@ public class ModRecipeProvider extends RecipeProvider implements IConditionBuild
                 .showNotification(false)
                 .unlockedBy(getHasName(Items.DEEPSLATE), has(Items.DEEPSLATE))
                 .save(pWriter);
+
+        nineBlockStorageRecipes(pWriter, RecipeCategory.MISC, ModItems.CELESTIUM_INGOT.get(), RecipeCategory.BUILDING_BLOCKS, ModBlocks.CELESTIUM_BLOCK.get());
     }
 }
