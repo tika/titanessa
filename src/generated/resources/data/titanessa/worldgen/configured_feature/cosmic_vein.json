@@ -1,0 +1,6 @@
+{
+  "type": "titanessa:ball_cluster",
+  "config": {
+    "probability": 0.01
+  }
+}
