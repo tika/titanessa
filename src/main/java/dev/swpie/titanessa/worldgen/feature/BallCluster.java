@@ -20,7 +20,7 @@ public class BallCluster extends Feature<ProbabilityFeatureConfiguration> {
         BlockPos blockpos = pContext.origin();
         RandomSource random = pContext.random();
 
-        int y = -60 + random.nextInt(20, 0);
+        int y = 40 + random.nextInt(20);
 
         BlockPos centre = new BlockPos(blockpos.getX(), y, blockpos.getZ());
 
@@ -34,7 +34,7 @@ public class BallCluster extends Feature<ProbabilityFeatureConfiguration> {
         worldgenlevel.setBlock(centre.north(), starstone, 3);
         worldgenlevel.setBlock(centre.east(), starstone, 3);
         worldgenlevel.setBlock(centre.south(), starstone, 3);
-        worldgenlevel.setBlock(centre.west(), core, 3);
+        worldgenlevel.setBlock(centre.west(), starstone, 3);
 
         return true;
     }

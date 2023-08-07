@@ -23,7 +23,6 @@ public class ModPlacedFeatures {
         register(context, COSMIC_VEIN_PLACED_KEY, configuredFeatures.getOrThrow(ModConfiguredFeatures.COSMIC_VEIN_KEY), ImmutableList.of(
                 InSquarePlacement.spread(),
                 PlacementUtils.HEIGHTMAP_TOP_SOLID,
-                CountPlacement.of(48),
                 BiomeFilter.biome()));
     }
 
