@@ -10,7 +10,6 @@ import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.ProbabilityFeatureConfiguration;
 
 public class BallCluster extends Feature<ProbabilityFeatureConfiguration> {
-//    public BallCluster(Codec<NoneFeatureConfiguration> pCodec) {
     public BallCluster() {
         super(ProbabilityFeatureConfiguration.CODEC);
     }
