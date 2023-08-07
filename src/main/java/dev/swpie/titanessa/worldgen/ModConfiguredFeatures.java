@@ -24,7 +24,7 @@ public class ModConfiguredFeatures {
         RuleTest netherrackReplaceables = new BlockMatchTest(Blocks.NETHERRACK);
         RuleTest endstoneReplaceables = new BlockMatchTest(Blocks.END_STONE);
 
-        register(context, COSMIC_VEIN_KEY, ModFeatures.BALL_CLUSTER.get(), new ProbabilityFeatureConfiguration(1.0F));
+        register(context, COSMIC_VEIN_KEY, ModFeatures.BALL_CLUSTER.get(), new ProbabilityFeatureConfiguration(0.01F));
     }
 
     public static ResourceKey<ConfiguredFeature<?, ?>> registerKey(String name) {
